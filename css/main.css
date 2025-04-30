@@ -1,0 +1,294 @@
+
+
+
+/* Updated main.css */
+:root {
+    --primary-color: #6C5CE7;  /* Modern purple */
+    --secondary-color: #00B894; /* Fresh teal */
+    --accent-color: #FF7675;    /* Coral accent */
+    --text-color: #2D3436;      /* Dark gray */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDFDFD;
+    color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #5B4DC8 100%);
+    box-shadow: 0 4px 20px rgba(108,92,231,0.15);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+}
+
+/* Cards */
+.card {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    border: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color), #5B4DC8) !important;
+    border-radius: 16px 16px 0 0 !important;
+    padding: 1.2rem;
+}
+
+.card-header h2 {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+/* Form Elements */
+.form-label {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+textarea.form-control {
+    min-height: 140px;
+    border: 2px solid #EDF2F7;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.9);
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(108,92,231,0.1);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.btn-success {
+    background: var(--secondary-color);
+    border: none;
+}
+
+.btn-success:hover {
+    background: #00A382;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: var(--accent-color);
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #FF6564;
+    transform: translateY(-2px);
+}
+
+tr[bgcolor="#f7d4e0"] { background: #F8F9FF !important; }
+tr[bgcolor="#fae5ed"] { background: rgba(237,242,247,0.5) !important; }
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #F8F9FF, #FFFFFF);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
+    margin-top: 4rem;
+}
+
+/* Font Awesome Icons */
+.copy-unicode::after { content: ' \f0c5'; font-family: 'Font Awesome 6 Free'; }
+.copy-fmabaya::after { content: ' \f0c5'; font-family: 'Font Awesome 6 Free'; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+    }
+    
+    textarea.form-control {
+        min-height: 120px;
+    }
+}
+
+.fmabaya-textarea {
+    font-family: 'FMAbaya', sans-serif;
+    font-size: 16px; /* Adjust size as needed */
+    line-height: 1.5;
+    color: #333; /* Adjust color as needed */
+}
+@font-face {
+    font-family: 'FMAbaya';
+    src: url('../assets/FM_GANGA.TTF') format('truetype');
+}
+
+
+.mic-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.mic-button:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}
+
+.mic-button.active {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.mic-button .icon {
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+.mic-button.active .icon {
+    color: #fff;
+}
+
+.input-container {
+    position: relative;
+    padding-bottom: 80px; /* Space for mic button */
+}
+
+/* Animation for the active mic button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.input-textarea:focus {
+    border-color: #4285f4;
+    box-shadow: 0 0 0 0.25rem rgba(66, 133, 244, 0.25);
+}
+.interim {
+    color: #6c757d;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+/* Mobile-specific voice typing styles */
+@media (max-width: 768px) {
+    .mic-button {
+        right: 15px;
+        bottom: 15px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(220, 53, 69, 0.1);
+        border: 2px solid #dc3545;
+        z-index: 10;
+    }
+    
+    .mic-button.active {
+        background: #dc3545;
+        color: white;
+        animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    .input-textarea {
+        padding-right: 60px !important;
+        min-height: 120px;
+    }
+}
+
+   /* Touch Protector Overlay */
+   .touch-protector {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(70, 70, 70, 0.8);
+    /* Darker semi-transparent background */
+    z-index: 9999;
+    /* Ensures it stays on top */
+    display: none;
+    /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Active State */
+.touch-protector.active {
+    display: flex;
+    /* Shows overlay */
+    animation: fadeIn 0.3s ease-in-out;
+    /* Smooth fade-in effect */
+}
+
+/* Update Notice Box */
+.touch-protector .notice {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Almost fully white */
+    color: #ff3333;
+    /* Dark text for better readability */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    /* More visible shadow */
+    max-width: 90%;
+    width: 400px;
+    /* Responsive */
+}
